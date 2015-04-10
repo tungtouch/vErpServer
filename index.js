@@ -198,7 +198,7 @@ var getTasksNearDeadline = {
     DateType:"Deadline",
     SessionId:ssid
 };
-        
+
 var getProjectNearFinish = {
     RequestAction:"SearchProject",
     RequestClass:"Tasks",
@@ -286,8 +286,8 @@ var SearchContract = {
     EndIndex:20,
     SessionId:ssid
 };
-    
- 
+
+
 
 // Product
 
@@ -537,7 +537,7 @@ var SearchContact = {
     EndIndex:20,
     SessionId:ssid
 };
-        
+
 var UpdateContact = {
     RequestAction:"UpdateProfile",
     RequestClass:"xProfile",
@@ -800,7 +800,7 @@ var planed = {
     State:16
 }
 
-        
+
 // request.post({url: 'http://money.xoffice.vn/xRequest.ashx', formData: planed}, function (err, data) {
 //     wFile('json/planed.json', data.body);
 // });
@@ -820,7 +820,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-    
+
 var acc = {
     Account: "admin",
     Password: "1",
@@ -831,7 +831,7 @@ var acc = {
 app.get('/', function(req, res) {
     res.json('Load to Index');
     console.log(req.body);
-    
+
 });
 
 // var json = require('./json/SearchTask.json');
@@ -850,365 +850,365 @@ app.get('/', function(req, res) {
 // console.log(res, res.length);
 
 app.post('/', function(req, res) {
-    
-    console.log(req.body);    
-    
+
+    console.log(req.body);
+
     if((req.body.Account == acc.Account) && (req.body.Password == acc.Password)) {
         res.send(acc.token);
     }
-    
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Category.Task") {
         rFile('json/getTask.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Category.Phase") {
         rFile('json/getCategories.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Category.Status") {
         rFile('json/getProjects.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchMilestone") {
         rFile('json/getMilestone.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchUsers") {
         rFile('json/getEmployee.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchTarget") {
-        
+
         rFile('json/getTargets.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchProject" && req.body.page == 1 && req.body.RequestClass == "Tasks") {
-        
+
         rFile('json/searchPrj.json', function(err, dt) {
             res.send(JSON.parse(dt));
         });
     } else
-    
-    
+
+
 
     if(req.body.RequestAction == "SearchDocument" && req.body.ConditionFields == "StartIndex;EndIndex;Code;") {
         rFile('json/getContracts.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchDocument" && req.body.ConditionFields == "StartIndex;EndIndex;Code;Status") {
         rFile('json/getContractNearLiquiDate.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchProject" && req.body.DateType == "FinishDate") {
         rFile('json/getProjectNearFinish.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
 
-    
+
     if(req.body.RequestAction == "SearchTask" && req.body.DateType == "Deadline") {
         rFile('json/getTasksNearDeadline.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchTask" && req.body.DateType == "PlanStartDate") {
         rFile('json/SearchTask.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Contract.Type") {
         rFile('json/getContractType.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchGroup") {
-        
+
         rFile('json/getOrganization.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
+
+
     if(req.body.RequestAction == "SearchProfile" && req.body.StaticFields == "Name;ShortName;Code;DisplayName") {
         rFile('json/getCustomers.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Contract.Status") {
         rFile('json/getCustomers.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchDocument" && req.body.ConditionFields == "StartIndex;EndIndex;Code") {
         rFile('json/SearchContract.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Project.Priority") {
         rFile('json/getPriority.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Project.Status") {
         rFile('json/getProjectStatus.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Project.State") {
         rFile('json/getProjectState.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchProject" && req.body.ConditionFields == "StartIndex;EndIndex") {
         rFile('json/SearchProject.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Category.Sector") {
         rFile('json/getSectors.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
+
+
     if(req.body.RequestAction == "SearchProfile" && req.body.DynamicFields == "Facebook;SectorName") {
         rFile('json/SearchContact.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
-        
+
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Product.Type") {
         rFile('json/getProductType.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Settings.Product.Status") {
         rFile('json/getProductStatus.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SearchDocument" && req.body.DynamicFields == "TypeName;ParentName;StatusName") {
         rFile('json/SearchProduct.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchTask" && req.body.ConditionFields == "StartIndex;EndIndex;DateType;State") {
         rFile('json/planed.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
+    }
 
-    
-    
-    
-    
+
+
+
+
     /// Handler GUI
     if(req.body.RequestAction == "SummaryTaskByProject") {
         rFile('json/sumTaskByPrj.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     }
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SummaryTaskByTarget") {
         rFile('json/sumTaskByTarget.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     }
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SummaryTaskByWorker") {
         rFile('json/sumTaskByWorker.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     }
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SummaryTaskByCategory") {
         rFile('json/sumTaskByCategory.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     }
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SummaryTaskByStatus") {
         rFile('json/sumTaskByStatus.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     }
-    
-    
-    
+
+
+
     if(req.body.RequestAction == "SearchDocument" && req.body.OrderFields == "PublishedDate ASC") {
         rFile('json/contractSum.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
     } else
-    
+
     if(req.body.RequestAction == "SearchDocument" && req.body.StaticFields == "Type;OfficialNumber;PublishedDate;Signer;Parent;Status;Code;Id") {
         rFile('json/contractSum2.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
+    }
+
 //    req.body.RequestAction == "SearchDocument" && req.body.DynamicFields == "DepartmentName" && req.body.StaticFields == "Name;Id"
-            
+
     if(req.body.DynamicFields == "DepartmentName") {
 
         rFile('json/departName.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
-    
+    }
+
+
+
     if(req.body.RequestAction == "SummaryTaskByGroup") {
         rFile('json/sumTaskByGroup.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
     if(req.body.RequestAction == "SearchProject" && req.body.StructFields == "Department;Progress;StartDate;State;PlanManHour;ActualManHour;RemainingManHour;InlineManHour;MissDeadlineManHour") {
         rFile('json/stPrj.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
-    
+    }
+
+
+
     if(req.body.DynamicFields == "StatusName") {
         rFile('json/statusNamePrj.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
+    }
+
 
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xSystem.Setting.Title") {
         rFile('json/employeeL.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
+    }
+
     if(req.body.RequestAction == "SearchProfile" && req.body.Code == "Employee") {
         rFile('json/eL2.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
+    }
+
     if(req.body.RequestAction == "SearchTerritory") {
         rFile('json/sTerry.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
     if(req.body.RequestAction == "SearchUser") {
         rFile('json/getCurators.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
 
     if(req.body.RequestAction == "SearchProfile" && req.body.StaticFields == "DisplayName" && req.body.Code == "Contact") {
         rFile('json/getContactPerson.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
     if(req.body.StructFields == "Curator;ContactPerson" && req.body.Code == "Customer") {
         rFile('json/SearchContactCustomer.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
     if(req.body.StructFields == "Curator;ContactPerson" && req.body.Code == "Provider") {
         rFile('json/SearchContactProvider.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
     if(req.body.StructFields == "Curator;ContactPerson" && req.body.Code == "Partner") {
         rFile('json/SearchContactPartner.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
-    
+    }
+
+
+
     if(req.body.RequestAction == "SearchCategory" && req.body.ParentCode == "xProfile.Category.Gender") {
         rFile('json/getGenders.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
+    }
+
+
     if(req.body.RequestAction == "SearchProfile" && req.body.Code == "Customer;Provider;Partner") {
         rFile('json/getCompanies.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
-    
-    
+    }
+
+
+
     if(req.body.DynamicFields == "GenderName;ParentName" && req.body.Code == "Contact") {
         rFile('json/SearchContactAddress.json', function(err, dt) {
             res.json(JSON.parse(dt));
         });
-    } 
-    
+    }
 
-    
+
+
 
 });
 
@@ -1225,9 +1225,9 @@ app.post('/', function(req, res) {
 
 
 app.post('/userInfo', function(req, res) {
-    
+
     console.log(req.body);
-    
+
     if(req.body.SessionId === acc.token) {
         rFile('json/userInfo.json', function(err, data) {
             res.json(JSON.parse(data));
@@ -1265,5 +1265,5 @@ app.post('/:methodName', function(req, res) {
 
 
 app.listen(9000, function() {
-    console.log('Server was running at port 8000');
+    console.log('Server was running at port 9000');
 });
