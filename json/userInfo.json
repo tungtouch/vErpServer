@@ -1,0 +1,57 @@
+{
+    "UserDS": {
+        "Group": [
+            {
+                "Data": "<Document><Data><Language>vi-VN</Language><Static /><Dynamic><GroupId>fa69b41b-336d-415b-be51-8b10b529c925</GroupId></Dynamic><Fields><Field><ColumnType>1</ColumnType><Code>TotalTasks</Code><Value>30</Value></Field><Field><ColumnType>2</ColumnType><Code>PlanManHour</Code><Value>22.5</Value></Field><Field><ColumnType>2</ColumnType><Code>ActualManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>RemainingTasks</Code><Value>4</Value></Field><Field><ColumnType>2</ColumnType><Code>RemainingManHour</Code><Value>7.5</Value></Field><Field><ColumnType>1</ColumnType><Code>UnplanTasks</Code><Value>18</Value></Field><Field><ColumnType>2</ColumnType><Code>UnplanManHour</Code><Value>18.5</Value></Field><Field><ColumnType>1</ColumnType><Code>InlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>InlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>MissDeadlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>MissDeadlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>TotalProjects</Code><Value>19</Value></Field></Fields></Data></Document>",
+                "Description": "AGMIS",
+                "GroupId": "fa69b41b-336d-415b-be51-8b10b529c925",
+                "GroupName": "AGMIS",
+                "GroupPath": "fa69b41b-336d-415b-be51-8b10b529c925",
+                "GroupType": "1",
+                "Status": "1"
+            },
+            {
+                "Data": "<Document><Data><Language>vi-VN</Language><Static /><Dynamic><GroupId>4d7874b2-9bd2-4394-965f-30aaadca6e5c</GroupId></Dynamic><Fields><Field><ColumnType>1</ColumnType><Code>TotalTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>PlanManHour</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>ActualManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>RemainingTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>RemainingManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>UnplanTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>UnplanManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>InlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>InlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>MissDeadlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>MissDeadlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>TotalProjects</Code><Value>0</Value></Field></Fields></Data></Document>",
+                "Description": "Cấp trưởng đơn vị (Trưởng/Phó)",
+                "GroupId": "4d7874b2-9bd2-4394-965f-30aaadca6e5c",
+                "GroupName": "Leader",
+                "GroupType": "0",
+                "IsLeaf": "true",
+                "LeftIndex": "59",
+                "Level": "1",
+                "RightIndex": "60",
+                "Status": "1"
+            },
+            {
+                "Data": "<Document><Data><Language>vi-VN</Language><Static /><Dynamic><GroupId>93dd70fa-290c-4c0c-a9eb-c723c85bacc0</GroupId></Dynamic><Fields><Field><ColumnType>1</ColumnType><Code>TotalTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>PlanManHour</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>ActualManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>RemainingTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>RemainingManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>UnplanTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>UnplanManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>InlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>InlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>MissDeadlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>MissDeadlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>TotalProjects</Code><Value>0</Value></Field></Fields></Data></Document>",
+                "Description": "Giám sát hệ thống, có quyền xem tất cả các văn bản mà không bị giới hạn theo quyền truy cập của văn bản",
+                "GroupId": "93dd70fa-290c-4c0c-a9eb-c723c85bacc0",
+                "GroupName": "Supervisor",
+                "GroupType": "0",
+                "IsLeaf": "true",
+                "LeftIndex": "61",
+                "Level": "1",
+                "RightIndex": "62",
+                "Status": "1"
+            },
+            {
+                "Data": "<Document><Data><Language>vi-VN</Language><Static /><Dynamic><GroupId>2fc8fae8-bf43-4fdb-8daf-58b73bf2ff36</GroupId></Dynamic><Fields><Field><ColumnType>1</ColumnType><Code>TotalTasks</Code><Value>30</Value></Field><Field><ColumnType>2</ColumnType><Code>PlanManHour</Code><Value>22.5</Value></Field><Field><ColumnType>2</ColumnType><Code>ActualManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>RemainingTasks</Code><Value>4</Value></Field><Field><ColumnType>2</ColumnType><Code>RemainingManHour</Code><Value>7.5</Value></Field><Field><ColumnType>1</ColumnType><Code>UnplanTasks</Code><Value>18</Value></Field><Field><ColumnType>2</ColumnType><Code>UnplanManHour</Code><Value>18.5</Value></Field><Field><ColumnType>1</ColumnType><Code>InlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>InlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>MissDeadlineTasks</Code><Value>0</Value></Field><Field><ColumnType>2</ColumnType><Code>MissDeadlineManHour</Code><Value>0</Value></Field><Field><ColumnType>1</ColumnType><Code>TotalProjects</Code><Value>19</Value></Field></Fields></Data></Document>",
+                "Description": "Nhóm quyền quản trị cao nhất",
+                "GroupId": "2fc8fae8-bf43-4fdb-8daf-58b73bf2ff36",
+                "GroupName": "Administrator",
+                "GroupType": "0",
+                "Status": "1"
+            }
+        ],
+        "User": {
+            "Data": "<Document><Data><Language>vi-VN</Language><Static><LoginName>AnhVH</LoginName><Username>Võ Hà Anh</Username><Description>Võ Hà Anh</Description><EncryptedPassword>1234567</EncryptedPassword></Static><Dynamic><Email>AnhVH@fx.com.vn</Email><Telephone>01694001981</Telephone><Avatar>3979cbe6-f24c-41b6-a3d4-ae4482ae0b11-Avatar.jpg</Avatar><Birthday /><Content /></Dynamic></Data></Document>",
+            "Description": "Võ Hà Anh",
+            "EncryptedPassword": "1234567",
+            "LoginName": "AnhVH",
+            "Permission": "1",
+            "Status": "1",
+            "UserId": "d34fab91-43d5-4343-8048-f00072e5e6bc",
+            "Username": "Võ Hà Anh"
+        }
+    }
+}
